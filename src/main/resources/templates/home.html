@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>명예의 전당</title>
+</head>
+<body>
+<h1>명예의 전당</h1>
+<div>
+    <!-- 게시판 목록 -->
+    <!--Board 객체의 속성 이름이 MyBatis의 selectAll() 메소드에서 반환하는 결과의 컬럼 이름과 정확히 일치하도록 주의 -->
+    <div th:each="board : ${boards}">
+        <a th:href="@{/board/{id}(id=${board.boardId})}">
+            <div th:text="${board.boardName}" class="board-item"></div>
+        </a>
+    </div>
+    <!-- 새 게시판 추가 버튼 -->
+    <a th:href="@{/board/new}" class="add-board">
+        <div>+</div>
+    </a>
+</div>
+</body>
+</html>
