@@ -187,3 +187,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### database info
+application.properties
+mybatis-config.xml
